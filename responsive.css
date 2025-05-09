@@ -1,0 +1,117 @@
+/* Make it responsive */
+@media (max-width: 768px) {
+    .nav-links {
+      display: none; /* hide menu links */
+      flex-direction: column;
+      width: 100%;
+      background-color: #333;
+    }
+  
+    .nav-links.active {
+      display: flex; /* show menu links when active */
+    }
+  
+    .menu-icon {
+      display: block; /* show hamburger icon */
+    }
+  }
+
+
+  /* ------------------------------------ Test Responsive Design -------------------------------------------- */
+  /* Responsive Improvements */
+  @media (max-width: 992px) {
+    nav ul.nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #333;
+        position: absolute;
+        top: 80px;
+        left: 0;
+    }
+    nav ul.nav-links.active {
+        display: flex;
+    }
+    .menu-icon {
+        display: block;
+    }
+    .card-container, .container2 {
+        flex-direction: column;
+        align-items: center;
+    }
+    .features {
+        margin: 0 20px;
+    }
+    .headder {
+        margin: 30px 20px;
+    }
+    .main-header {
+        font-size: 24px;
+        margin: 20px 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .searchbar-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+    #catagories, #input-search, .search-btn {
+        width: 100%;
+        margin: 5px 0;
+    }
+    .hero .overlay h1 {
+        font-size: 2rem;
+    }
+    .overlay .shop_btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+    footer {
+        height: auto;
+    }
+    .middle-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    .sec1, .sec2, .sec3, .sec4 {
+        width: auto;
+        margin: 10px 0;
+    }
+    .product-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+}
+  /* Responsive Navigation */
+  @media screen and (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background: #333;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      padding: 1rem 0;
+    }
+    .nav-links.active {
+      display: flex;
+    }
+    .menu-icon {
+      display: block;
+    }
+  }
+/* ------------- */
+  /* Make it 2 columns on screens smaller than 600px */
+@media (max-width: 600px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Optional: 1 column for very small screens */
+@media (max-width: 400px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
